@@ -1,0 +1,193 @@
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+  background-color: #2b2b2b;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background: linear-gradient(90deg, #1e1e1e, #2b2b2b);
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  font-family: "Notable", sans-serif;
+  font-size: 40px;
+  color: #D4FF00;
+  margin-bottom: 5px;
+  text-shadow: 0 0 6px #D4FF00;
+}
+
+.logo .slogan {
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  background-color: #D4FF00;
+  color: #2B2B2B;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #555;
+  color: #D4FF00;
+  transform: scale(1.05);
+}
+
+.main-nav a.active {
+  background-color: transparent;
+  border: 2px solid #D4FF00;
+  color: #D4FF00;
+}
+
+.auth-links {
+  color: #D4FF00; /* Лаймовый цвет текста — ярко и заметно */
+  background-color: transparent !important; /* Прозрачный фон — убирает наследованный лаймовый фон от глобального стиля a */
+  text-decoration: none; /* Убираем подчёркивание */
+  margin: 0 4px; /* Небольшое расстояние между ссылками */
+  font-weight: 400; /* Обычная толщина шрифта */
+  padding: 2px 6px; /* Отступы вокруг текста */
+  border-radius: 4px; /* Слегка скруглённые углы */
+  transition: background-color 0.3s ease; /* Плавная анимация фона при наведении */
+  font-size: 13px;
+}
+
+.auth-links a {
+  color: #D4FF00;
+  background-color: transparent !important;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 500; /* Сделаем чуть жирнее */
+  font-size: 20px; /* Увеличим размер шрифта */
+  padding: 4px 10px; /* Немного больше отступы */
+  border-radius: 4px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease; /* Добавим плавное масштабирование */
+}
+
+.auth-links a:hover {
+  background-color: #2B2B2B;
+  text-decoration: underline;
+  transform: scale(1.1); /* Увеличим элемент */
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #CCCCCC;
+}
+
+.form-footer a {
+  color: #D4FF00;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+.catalog {
+  padding: 40px 0;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1e1e1e;
+  font-size: 14px;
+  color: #999;
+  border-top: 1px solid #444;
+}
+
+.form-section {
+  padding: 60px 0;
+  background-color: #2B2B2B;
+  margin-top: 20px; /* ДОБАВИЛ ЭТО */
+}
+
+.form-title {
+  color: #D4FF00;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-family: "Notable", sans-serif;
+}
+
+.registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(212, 255, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.registration-form label {
+  color: #F0F0F0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.registration-form input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #2B2B2B;
+  color: #F0F0F0;
+  transition: border-color 0.3s;
+}
+
+.registration-form input:focus {
+  outline: none;
+  border-color: #D4FF00;
+}
+
+.registration-form button {
+  background-color: #D4FF00;
+  color: #2B2B2B;
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.registration-form button:hover {
+  background-color: #555;
+  color: #D4FF00;
+  transform: scale(1.03);
+}

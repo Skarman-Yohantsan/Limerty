@@ -1,0 +1,50 @@
+.pt-sans-narrow-regular {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-narrow-bold {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Сброс базовых стилей */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  background-color: #bfffff;
+}
+a {
+  display: inline-block; padding: 15px 40px; /* или block в зависимости от нужд */
+  font-size: 20px;
+  margin-right: 20px;
+  background-color: #adbcff; color: black; /* цветовое оформление*/
+  text-decoration: none; /* убираем подчёркивание под ссылкой*/
+  border-radius: 5px; /*скругление границ*/
+  cursor: pointer; /* указывает что это кликабельный элемент*/
+}
+a:hover { /*hover это псевдокласс который применяется к элементам когда пользователь наводит на них курсор*/
+  transform: scale(1.1); /*увиличение размера при наведении в 1.1 раза */
+  transition: transform 0.3s ease; /* плавный переход увиличения */
+  background-color: #fc68ad; /*цвет фона при наведении */
+}
+.nav-container {
+  display: flex; /*один из способов размещения*/
+  justify-content: center;/* горизонтальное центрирование */
+  align-items: center;/* вертикальное центрирование */
+}
+a.active {
+  background-color: #56db67;
+  border-bottom: 8px solid #51bd51;
+  text-decoration: none;
+}

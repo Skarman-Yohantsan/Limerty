@@ -1,0 +1,186 @@
+.top-bar { /* Верхняя узкая панель */
+  display: flex; /* Выравнивание в строку */
+  justify-content: flex-end; /* Ссылки прижаты вправо */
+  background-color: #1e1e1e; /* Цвет фона */
+  padding: 6px 20px; /* Меньше отступов сверху и по бокам */
+  font-size: 13px; /* Чуть меньше шрифт */
+}
+
+.auth-links a {
+  color: #D4FF00; /* Лаймовый цвет текста — ярко и заметно */
+  background-color: transparent !important; /* Прозрачный фон — убирает наследованный лаймовый фон от глобального стиля a */
+  text-decoration: none; /* Убираем подчёркивание */
+  margin: 0 4px; /* Небольшое расстояние между ссылками */
+  font-weight: 400; /* Обычная толщина шрифта */
+  padding: 2px 6px; /* Отступы вокруг текста */
+  border-radius: 4px; /* Слегка скруглённые углы */
+  transition: background-color 0.3s ease; /* Плавная анимация фона при наведении */
+}
+
+.auth-links a:hover {
+  background-color: #2B2B2B; /* При наведении — тёмный фон (не яркий), читаемо и контрастно */
+  text-decoration: underline; /* Подчёркивание при наведении для удобства пользователя */
+}
+
+.notable-regular { /* Класс для текста со шрифтом Notable */
+  font-family: "Notable", sans-serif; /* Установка шрифта Notable, без засечек */
+  font-weight: 400; /* Толщина шрифта — обычная */
+  font-style: normal; /* Стиль шрифта — нормальный */
+}
+
+.pt-sans-narrow-regular { /* Класс для обычного текста с PT Sans Narrow */
+  font-family: "PT Sans Narrow", sans-serif; /* Установка шрифта PT Sans Narrow */
+  font-weight: 400; /* Обычная толщина */
+  font-style: normal; /* Нормальный стиль */
+}
+
+.pt-sans-narrow-bold { /* Класс для жирного текста с PT Sans Narrow */
+  font-family: "PT Sans Narrow", sans-serif; /* Тот же шрифт */
+  font-weight: 700; /* Жирный */
+  font-style: normal; /* Без наклона */
+}
+
+/* Сброс базовых стилей */
+* {
+  box-sizing: border-box; /* Учитывать рамку и отступы в размерах */
+  margin: 0; /* Убрать внешние отступы по умолчанию */
+  padding: 0; /* Убрать внутренние отступы по умолчанию */
+}
+
+body { /* Основной стиль для страницы */
+  font-family: "PT Sans Narrow", sans-serif; /* Общий шрифт для страницы */
+  color: #F0F0F0; /* Светло-серый цвет текста */
+  background-color: #2B2B2B; /* Тёмный фон страницы */
+}
+
+header { /* Стили для шапки */
+  background: linear-gradient(90deg, #1e1e1e, #2b2b2b); /* Градиентный фон слева направо */
+  padding: 20px 0; /* Отступ сверху и снизу */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6); /* Тень под шапкой */
+}
+
+a { /* Общие стили для ссылок */
+  display: inline-block; /* Сделать ссылку блочно-строчной */
+  padding: 15px 40px; /* Внутренние отступы */
+  font-size: 20px; /* Размер шрифта */
+  margin-right: 25px; /* Отступ между ссылками */
+  background-color: #D4FF00; /* Яркий лаймовый фон */
+  color: #2B2B2B; /* Тёмный цвет текста */
+  text-decoration: none; /* Убрать подчёркивание */
+  border-radius: 5px; /* Скруглённые углы */
+  cursor: pointer; /* Курсор при наведении — "рука" */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Плавная анимация цвета и масштаба */
+}
+
+a:hover { /* При наведении на любую ссылку */
+  transform: scale(1.1); /* Увеличить при наведении */
+  background-color: #555555; /* Сменить фон на тёмный */
+  color: #D4FF00; /* Сделать текст лаймовым */
+}
+
+.nav-container { /* Контейнер меню навигации */
+  display: flex; /* Включить флекс-контейнер */
+  justify-content: center; /* Центрировать по горизонтали */
+  align-items: center; /* Центрировать по вертикали */
+  margin-top: 10px; /* Отступ сверху */
+}
+
+a.active { /* Стили для активной кнопки меню */
+  background-color: transparent; /* Прозрачный фон */
+  color: #D4FF00; /* Лаймовый текст */
+  border: 2px solid #D4FF00; /* Лаймовая обводка */
+  border-radius: 8px; /* Больше скругление */
+  padding: 18px 48px; /* Увеличенные отступы */
+  font-size: 22px; /* Увеличенный размер шрифта */
+  font-weight: 700; /* Жирный текст */
+  text-decoration: none; /* Без подчёркивания */
+  animation: activeButtonPulse 0.6s ease forwards; /* Анимация "пульсации" кнопки */
+}
+
+@keyframes activeButtonPulse { /* Ключевые кадры анимации для активной ссылки */
+  0% { transform: scale(1); } /* Начальный масштаб */
+  50% { transform: scale(1.1); } /* Увеличение до 110% */
+  100% { transform: scale(1); } /* Возврат к норме */
+}
+
+h1 { /* Заголовок сайта */
+  font-family: "Notable", sans-serif; /* Заголовок с шрифтом Notable */
+  font-weight: 400; /* Обычный вес */
+  font-style: normal; /* Прямой стиль */
+  font-size: 50px; /* Очень крупный шрифт */
+  text-align: center; /* Центрирование */
+  color: #D4FF00; /* Лаймовый цвет текста */
+  text-shadow: 0 0 6px #D4FF00; /* Светящаяся тень */
+  margin-bottom: 5px; /* Отступ снизу */
+}
+
+.slogan { /* Слоган под заголовком */
+  text-align: center; /* Центрирование текста */
+  font-size: 18px; /* Средний размер шрифта */
+  color: #AAAAAA; /* Светло-серый текст */
+  margin-bottom: 15px; /* Отступ снизу */
+  font-weight: 500; /* Полужирный текст */
+}
+
+hr { /* Горизонтальная линия */
+  border: 0; /* Убираем границу по умолчанию */
+  height: 1px; /* Высота линии */
+  background-color: #444444; /* Цвет разделителя */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+.site-footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1e1e1e;
+  font-size: 14px;
+  color: #999;
+  border-top: 1px solid #444;
+}
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo {
+    text-align: center;
+    min-width: auto;
+    margin-bottom: 15px;
+  }
+
+  nav {
+    justify-content: center;
+    margin: 0 0 15px 0;
+  }
+
+  .auth-links {
+    justify-content: center;
+    min-width: auto;
+  }
+
+  nav a {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .logo h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  nav a {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .auth-links a {
+    font-size: 16px;
+    padding: 3px 8px;
+  }
+}
